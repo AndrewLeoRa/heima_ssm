@@ -12,8 +12,7 @@ import java.util.List;
  * @Date 2021/6/19 22:57
  * @Version 1.0
  */
-@Service
 public interface IProductService {
 
-    public List<Product> findAll();
+    public List<Product> findAll() throws Exception;
 }

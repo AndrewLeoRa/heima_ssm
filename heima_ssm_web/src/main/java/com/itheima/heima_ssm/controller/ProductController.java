@@ -18,7 +18,7 @@ import java.util.List;
  * @Version 1.0
  */
 @Controller
-@RequestMapping
+@RequestMapping("/product")
 public class ProductController {
 
 
@@ -26,7 +26,7 @@ public class ProductController {
     private IProductService productService;
 
     @RequestMapping("findAll.do")
-    public ModelAndView findAll(){
+    public ModelAndView findAll() throws Exception {
         ModelAndView modelAndView = new ModelAndView();
         List<Product> productList = productService.findAll();
         modelAndView.addObject("",productList);

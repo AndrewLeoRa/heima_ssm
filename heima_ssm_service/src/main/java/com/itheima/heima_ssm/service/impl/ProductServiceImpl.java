@@ -23,7 +23,7 @@ public class ProductServiceImpl implements IProductService {
     private IProductDao productDao;
 
     @Override
-    public List<Product> findAll() {
-        return null;
+    public List<Product> findAll() throws Exception {
+        return productDao.findAll();
     }
 }
