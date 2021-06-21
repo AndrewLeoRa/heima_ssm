@@ -1,8 +1,10 @@
 package com.itheima.heima_ssm.domain;
 
+import itheima.heima_ssm.utils.DateUtils;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
+
 
 /**
  * @ClassName Product
@@ -66,6 +68,9 @@ public class Product {
     }
 
     public String getDepartureTimeStr() {
+        if(departureTime!=null){
+            departureTimeStr= DateUtils.date2String(departureTime,"yyyy-MM-dd HH:mm:ss");
+        }
         return departureTimeStr;
     }
 
