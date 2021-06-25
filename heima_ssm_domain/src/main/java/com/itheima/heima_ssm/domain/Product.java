@@ -103,6 +103,13 @@ public class Product {
     }
 
     public String getProductStatusStr() {
+        if (productStatus != null) {
+            // 状态 0 关闭 1 开启
+            if(productStatus==0)
+                productStatusStr="关闭";
+            if(productStatus==1)
+                productStatusStr="开启";
+        }
         return productStatusStr;
     }
 
